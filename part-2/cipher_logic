@@ -1,0 +1,12 @@
+Simple cipher:
+
+Literally just a caesar cipher but with a five character shift instead of three.
+Ignores non alphabetical characters.
+
+
+base:
+I love cryptography!
+shifted by 5 to the right:
+N qtaj hwduytlwfumd!
+shifted by 5 to the left:
+I love cryptography!

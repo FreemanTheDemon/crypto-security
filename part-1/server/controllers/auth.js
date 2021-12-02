@@ -7,9 +7,9 @@ module.exports = {
       console.log(req.body)
       const { username, password } = req.body
       for (let i = 0; i < users.length; i++) {
-        const passExists = bcrypt.compareSync(password, users[i].password);
+        let passExists = bcrypt.compareSync(password, users[i].password);
         if (users[i].username === username && passExists) {
-          let returnedUser = {...users[i]}
+          let returnedUser = {...users[i]};
           delete returnedUser.password;
           console.log('User found', returnedUser);
           res.status(200).send(returnedUser);
